@@ -1,28 +1,28 @@
-* {
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    background: linear-gradient(135deg, #fff0f5, #ffe4e1, #ffc1cc);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    color: #c2185b;
-    overflow: hidden;
-    position: relative;
+    overflow-x: hidden; /* cegah scroll horizontal */
 }
 
 .container {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;          /* ganti height:100vh jadi min-height agar konten bisa scroll jika panjang */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15px;              /* padding lebih kecil di mobile */
+    min-height: 100vh; /* ganti height:100vh jadi min-height agar konten bisa lebih panjang */
+    width: 100%;
+    max-width: 100%;
+    padding: 10px; /* padding kecil di HP */
+}
+
+@media (max-width: 768px) {
+    .big-heart {
+        font-size: 6rem; /* heart lebih kecil tapi masih besar di HP */
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
 
 /* Heart besar di index.html */
@@ -215,4 +215,5 @@ p {
     .back-content p { font-size: 1.4rem; }
     .next-btn { padding: 16px 60px; font-size: 1.6rem; }
     .letter { max-width: 720px; padding: 50px 40px; font-size: 1.3rem; }
+
 }
